@@ -1,35 +1,11 @@
 import React, {FC} from 'react';
-import {View, Text, SafeAreaView, Button} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {HomeProps, RootStackParamList} from './types/Navigation';
+import {RootStackParamList} from './types/navigation';
+import Home from './screens/Home';
+import ProductDetails from './screens/ProductDetails';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
-
-const Home: FC<HomeProps> = ({navigation}): JSX.Element => {
-  return (
-    <SafeAreaView
-      style={{
-        flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center',
-      }}>
-      <Text>Home Screen</Text>
-      <Button
-        title="Go to Details"
-        onPress={() => navigation.navigate('Details')}
-      />
-    </SafeAreaView>
-  );
-};
-
-function DetailsScreen() {
-  return (
-    <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-      <Text>Details Screen</Text>
-    </View>
-  );
-}
 
 /**
  * Routes Component
@@ -41,7 +17,7 @@ const Routes: FC = (): JSX.Element => {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen name="Home" component={Home} />
-        <Stack.Screen name="Details" component={DetailsScreen} />
+        <Stack.Screen name="ProductDetails" component={ProductDetails} />
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -1,13 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * Generated with the TypeScript template
- * https://github.com/react-native-community/react-native-template-typescript
- *
- * @format
- */
-
 import React, {type PropsWithChildren} from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {
@@ -27,7 +17,10 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+import {QueryClient, QueryClientProvider} from '@tanstack/react-query';
 import Routes from './src/Routes';
+
+const queryClient = new QueryClient();
 
 const Section: React.FC<
   PropsWithChildren<{
@@ -66,7 +59,11 @@ const App = () => {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
 
-  return <Routes />;
+  return (
+    <QueryClientProvider client={queryClient}>
+      <Routes />
+    </QueryClientProvider>
+  );
 };
 
 const styles = StyleSheet.create({
