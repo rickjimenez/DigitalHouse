@@ -13,6 +13,7 @@ import format from 'date-fns/format';
 import es from 'date-fns/locale/es';
 import {useNavigation} from '@react-navigation/native';
 import {HomeProps} from '../types/navigation';
+import {useGlobalStyles} from '../styles/global';
 
 interface Props {
   data: GetProductsResponse[];
@@ -31,6 +32,7 @@ const ProductList: FC<Props> = ({
   isRefetching = false,
 }): JSX.Element => {
   const nav = useNavigation<HomeProps['navigation']>();
+  const globalStyles = useGlobalStyles();
   const styles = useStyles();
 
   const renderItem: ListRenderItem<GetProductsResponse> = ({item, index}) => {
@@ -41,7 +43,10 @@ const ProductList: FC<Props> = ({
         style={[styles.listItem, lastItem, fistItem]}
         onPress={() => nav.navigate('ProductDetails', {productId: item.id})}>
         <View style={styles.productInfoContainer}>
-          <Image style={[styles.thumb]} source={{uri: item.image}} />
+          <Image
+            style={[styles.thumb]}
+            source={{uri: item.image, cache: 'default'}}
+          />
           <View>
             <Text style={styles.productName}>{item.product}</Text>
             <Text style={styles.date}>
@@ -65,15 +70,18 @@ const ProductList: FC<Props> = ({
   };
 
   return (
-    <View style={styles.container}>
-      <FlatList
-        data={data}
-        renderItem={renderItem}
-        onRefresh={refetch}
-        refreshing={isRefetching}
-        showsVerticalScrollIndicator={false}
-      />
-    </View>
+    <>
+      <Text style={globalStyles.title}>TUS PUNTOS</Text>
+      <View style={styles.container}>
+        <FlatList
+          data={data}
+          renderItem={renderItem}
+          onRefresh={refetch}
+          refreshing={isRefetching}
+          showsVerticalScrollIndicator={false}
+        />
+      </View>
+    </>
   );
 };
 

@@ -1,10 +1,11 @@
 import React, {FC} from 'react';
-import {Text, View, StyleSheet} from 'react-native';
+import {Text, View, StyleSheet, ActivityIndicator} from 'react-native';
 import {GetProductsResponse} from '../types/api';
 import {useGlobalStyles} from '../styles/global';
 
 interface Props {
-  data: GetProductsResponse[];
+  data: GetProductsResponse[] | undefined;
+  isLoading?: boolean;
 }
 
 /**
@@ -12,9 +13,13 @@ interface Props {
  *
  * @returns {React.ReactElement} TotalPoints.
  */
-const TotalPoints: FC<Props> = ({data}): JSX.Element => {
+const TotalPoints: FC<Props> = ({
+  data = [],
+  isLoading = false,
+}): JSX.Element => {
   const styles = useStyles();
   const globalStyles = useGlobalStyles();
+
   const total = data.reduce((acc, cur) => {
     if (cur.is_redemption) {
       acc -= cur.points;
@@ -28,10 +33,16 @@ const TotalPoints: FC<Props> = ({data}): JSX.Element => {
     <View>
       <Text style={globalStyles.title}>TUS PUNTOS</Text>
       <View style={styles.container}>
-        <Text style={[styles.text, styles.subtitle]}>Diciembre</Text>
-        <View style={styles.points}>
-          <Text style={[styles.text, styles.pointsTxt]}>{total} pts</Text>
-        </View>
+        {isLoading ? (
+          <ActivityIndicator animating={true} color="white" />
+        ) : (
+          <>
+            <Text style={[styles.text, styles.subtitle]}>Diciembre</Text>
+            <View style={styles.points}>
+              <Text style={[styles.text, styles.pointsTxt]}>{total} pts</Text>
+            </View>
+          </>
+        )}
       </View>
     </View>
   );
@@ -55,6 +66,8 @@ const useStyles = () =>
       elevation: 5,
       padding: 20,
       alignSelf: 'center',
+      justifyContent: 'center',
+      marginBottom: 20,
     },
     points: {
       alignItems: 'center',

@@ -15,7 +15,10 @@ const Stack = createNativeStackNavigator<RootStackParamList>();
 const Routes: FC = (): JSX.Element => {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator
+        screenOptions={() => ({
+          headerShown: false,
+        })}>
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="ProductDetails" component={ProductDetails} />
       </Stack.Navigator>
