@@ -28,41 +28,37 @@ const ProductDetails: FC<ProductDetailsProps> = ({route}): JSX.Element => {
     'products',
   ]);
 
-  if (data) {
-    const [item] = data.filter(e => e.id === route.params.productId);
-    return (
-      <View style={styles.container}>
-        <SafeAreaView style={styles.customHeader}>
-          <Text style={styles.title}>{item.product}</Text>
-        </SafeAreaView>
-
-        <ScrollView>
-          <View style={styles.imageContainer}>
-            <Image style={styles.image} source={{uri: item.image}} />
-          </View>
-
-          <View style={styles.productInfoContainer}>
-            <Text style={styles.label}>Detalles del producto:</Text>
-            <Text style={styles.date}>
-              Comprado el{' '}
-              {format(new Date(item.createdAt), "dd 'de' MMMM yyyy", {
-                locale: es,
-              })}
-            </Text>
-            <Text style={styles.label}>{`Con esta compra ${
-              item.is_redemption ? 'canjeaste' : 'acumulaste'
-            }:`}</Text>
-            <Text style={styles.points}>{item.points} Puntos</Text>
-            <Button label="Aceptar" onPress={() => nav.goBack()} />
-          </View>
-        </ScrollView>
-      </View>
-    );
-  }
-
+  const [item] = data?.filter(e => e.id === route.params.productId);
   return (
     <View style={styles.container}>
-      <Text>Error</Text>
+      <SafeAreaView style={styles.customHeader}>
+        <Text style={styles.title}>{item.product}</Text>
+      </SafeAreaView>
+
+      <ScrollView>
+        <View style={styles.imageContainer}>
+          <Image style={styles.image} source={{uri: item.image}} />
+        </View>
+
+        <View style={styles.productInfoContainer}>
+          <Text style={styles.label}>Detalles del producto:</Text>
+          <Text style={styles.date}>
+            Comprado el{' '}
+            {format(new Date(item.createdAt), "dd 'de' MMMM yyyy", {
+              locale: es,
+            })}
+          </Text>
+          <Text style={styles.label}>{`Con esta compra ${
+            item.is_redemption ? 'canjeaste' : 'acumulaste'
+          }:`}</Text>
+          <Text style={styles.points}>{item.points} Puntos</Text>
+          <Button
+            label="Aceptar"
+            onPress={() => nav.goBack()}
+            testID="back-btn"
+          />
+        </View>
+      </ScrollView>
     </View>
   );
 };

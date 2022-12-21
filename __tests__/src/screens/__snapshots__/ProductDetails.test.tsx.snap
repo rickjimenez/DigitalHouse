@@ -1,0 +1,158 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test TotalPoints Comp renders correctly 1`] = `
+<View
+  style={
+    {
+      "flex": 1,
+    }
+  }
+>
+  <RCTSafeAreaView
+    style={
+      {
+        "backgroundColor": "#CFD6FF",
+        "height": 150,
+        "justifyContent": "flex-end",
+      }
+    }
+  >
+    <Text
+      style={
+        {
+          "fontSize": 24,
+          "fontWeight": "800",
+          "marginBottom": 20,
+          "marginLeft": 20,
+        }
+      }
+    >
+      product 1
+    </Text>
+  </RCTSafeAreaView>
+  <RCTScrollView>
+    <View>
+      <View
+        style={
+          {
+            "elevation": 5,
+            "padding": 20,
+            "shadowColor": "#000",
+            "shadowOffset": {
+              "height": 2,
+              "width": 0,
+            },
+            "shadowOpacity": 0.25,
+            "shadowRadius": 3.84,
+          }
+        }
+      >
+        <Image
+          source={
+            {
+              "uri": "image",
+            }
+          }
+          style={
+            {
+              "borderRadius": 10,
+              "height": 350,
+              "width": "100%",
+            }
+          }
+        />
+      </View>
+      <View
+        style={
+          {
+            "paddingHorizontal": 20,
+          }
+        }
+      >
+        <Text
+          style={
+            {
+              "color": "#9B9898",
+              "fontSize": 14,
+              "fontWeight": "800",
+            }
+          }
+        >
+          Detalles del producto:
+        </Text>
+        <Text
+          style={
+            {
+              "fontSize": 16,
+              "fontWeight": "800",
+              "marginVertical": 20,
+            }
+          }
+        >
+          Comprado el
+           
+          09 de diciembre 2022
+        </Text>
+        <Text
+          style={
+            {
+              "color": "#9B9898",
+              "fontSize": 14,
+              "fontWeight": "800",
+            }
+          }
+        >
+          Con esta compra acumulaste:
+        </Text>
+        <Text
+          style={
+            {
+              "fontSize": 24,
+              "fontWeight": "800",
+              "marginVertical": 40,
+            }
+          }
+        >
+          100
+           Puntos
+        </Text>
+        <View
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            {
+              "alignItems": "center",
+              "backgroundColor": "#334FFA",
+              "borderRadius": 10,
+              "height": 50,
+              "justifyContent": "center",
+              "opacity": 1,
+            }
+          }
+          testID="back-btn"
+        >
+          <Text
+            style={
+              {
+                "color": "white",
+                "fontSize": 14,
+                "fontWeight": "800",
+              }
+            }
+          >
+            Aceptar
+          </Text>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+</View>
+`;

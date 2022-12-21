@@ -3,7 +3,7 @@ import {render, screen, fireEvent} from '@testing-library/react-native';
 import React from 'react';
 import Filter from '../../../src/components/Filter';
 
-describe('test Button Comp', () => {
+describe('test Filter Comp', () => {
   test('renders correctly', () => {
     render(<Filter />);
 

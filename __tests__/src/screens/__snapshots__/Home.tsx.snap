@@ -1,0 +1,480 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test TotalPoints Comp renders correctly 1`] = `
+<RCTSafeAreaView
+  style={
+    {
+      "flex": 1,
+      "marginHorizontal": 20,
+    }
+  }
+>
+  <View
+    style={
+      {
+        "marginBottom": 20,
+      }
+    }
+  >
+    <Text
+      style={
+        {
+          "fontSize": 20,
+          "fontWeight": "800",
+        }
+      }
+    >
+      Bienvenido de vuelta!
+    </Text>
+    <Text
+      style={
+        {
+          "fontSize": 16,
+          "fontWeight": "600",
+        }
+      }
+    >
+      Ruben Rodriguez
+    </Text>
+  </View>
+  <View>
+    <Text
+      style={
+        {
+          "color": "#9B9898",
+          "fontSize": 14,
+          "fontWeight": "800",
+          "marginBottom": 10,
+        }
+      }
+    >
+      TUS PUNTOS
+    </Text>
+    <View
+      style={
+        {
+          "alignSelf": "center",
+          "backgroundColor": "#334FFA",
+          "borderRadius": 20,
+          "elevation": 5,
+          "height": 143,
+          "justifyContent": "center",
+          "marginBottom": 20,
+          "padding": 20,
+          "shadowColor": "#000",
+          "shadowOffset": {
+            "height": 2,
+            "width": 0,
+          },
+          "shadowOpacity": 0.25,
+          "shadowRadius": 3.84,
+          "width": 286,
+        }
+      }
+    >
+      <Text
+        style={
+          [
+            {
+              "color": "white",
+              "fontWeight": "bold",
+            },
+            {
+              "fontSize": 16,
+            },
+          ]
+        }
+      >
+        Diciembre
+      </Text>
+      <View
+        style={
+          {
+            "alignItems": "center",
+            "flex": 1,
+            "justifyContent": "center",
+          }
+        }
+      >
+        <Text
+          style={
+            [
+              {
+                "color": "white",
+                "fontWeight": "bold",
+              },
+              {
+                "fontSize": 32,
+              },
+            ]
+          }
+        >
+          70
+           pts
+        </Text>
+      </View>
+    </View>
+  </View>
+  <Text
+    style={
+      {
+        "color": "#9B9898",
+        "fontSize": 14,
+        "fontWeight": "800",
+        "marginBottom": 10,
+      }
+    }
+  >
+    TUS PUNTOS
+  </Text>
+  <View
+    style={
+      {
+        "backgroundColor": "white",
+        "borderRadius": 20,
+        "flex": 1,
+      }
+    }
+  >
+    <RCTScrollView
+      data={
+        [
+          {
+            "createdAt": "2022-12-09T06:34:25.607Z",
+            "id": "1",
+            "image": "image",
+            "is_redemption": false,
+            "points": 100,
+            "product": "product 1",
+          },
+          {
+            "createdAt": "2022-12-09T06:34:25.607Z",
+            "id": "2",
+            "image": "image",
+            "is_redemption": true,
+            "points": 30,
+            "product": "product 2",
+          },
+        ]
+      }
+      getItem={[Function]}
+      getItemCount={[Function]}
+      keyExtractor={[Function]}
+      onContentSizeChange={[Function]}
+      onLayout={[Function]}
+      onMomentumScrollBegin={[Function]}
+      onMomentumScrollEnd={[Function]}
+      onRefresh={[Function]}
+      onScroll={[Function]}
+      onScrollBeginDrag={[Function]}
+      onScrollEndDrag={[Function]}
+      refreshControl={
+        <RefreshControlMock
+          onRefresh={[Function]}
+          refreshing={false}
+        />
+      }
+      refreshing={false}
+      removeClippedSubviews={false}
+      renderItem={[Function]}
+      scrollEventThrottle={50}
+      showsVerticalScrollIndicator={false}
+      stickyHeaderIndices={[]}
+      testID="list"
+      viewabilityConfigCallbackPairs={[]}
+    >
+      <RCTRefreshControl />
+      <View>
+        <View
+          onLayout={[Function]}
+          style={null}
+        >
+          <View
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+                "marginBottom": 10,
+                "marginHorizontal": 20,
+                "marginTop": 20,
+                "opacity": 1,
+              }
+            }
+            testID="item-btn"
+          >
+            <View
+              style={
+                {
+                  "alignItems": "center",
+                  "flexDirection": "row",
+                }
+              }
+            >
+              <Image
+                source={
+                  {
+                    "cache": "default",
+                    "uri": "image",
+                  }
+                }
+                style={
+                  [
+                    {
+                      "borderRadius": 10,
+                      "height": 45,
+                      "marginRight": 10,
+                      "width": 45,
+                    },
+                  ]
+                }
+              />
+              <View>
+                <Text
+                  style={
+                    {
+                      "fontSize": 14,
+                      "fontWeight": "800",
+                    }
+                  }
+                >
+                  product 1
+                </Text>
+                <Text
+                  style={
+                    {
+                      "fontSize": 12,
+                      "fontWeight": "400",
+                    }
+                  }
+                >
+                  09 de diciembre 2022
+                </Text>
+              </View>
+            </View>
+            <View>
+              <Text
+                style={
+                  {
+                    "fontSize": 14,
+                    "fontWeight": "800",
+                  }
+                }
+              >
+                <Text
+                  style={
+                    {
+                      "color": "#00B833",
+                    }
+                  }
+                >
+                  + 
+                </Text>
+                100
+              </Text>
+            </View>
+          </View>
+        </View>
+        <View
+          onLayout={[Function]}
+          style={null}
+        >
+          <View
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+                "marginBottom": 20,
+                "marginHorizontal": 20,
+                "opacity": 1,
+              }
+            }
+            testID="item-btn"
+          >
+            <View
+              style={
+                {
+                  "alignItems": "center",
+                  "flexDirection": "row",
+                }
+              }
+            >
+              <Image
+                source={
+                  {
+                    "cache": "default",
+                    "uri": "image",
+                  }
+                }
+                style={
+                  [
+                    {
+                      "borderRadius": 10,
+                      "height": 45,
+                      "marginRight": 10,
+                      "width": 45,
+                    },
+                  ]
+                }
+              />
+              <View>
+                <Text
+                  style={
+                    {
+                      "fontSize": 14,
+                      "fontWeight": "800",
+                    }
+                  }
+                >
+                  product 2
+                </Text>
+                <Text
+                  style={
+                    {
+                      "fontSize": 12,
+                      "fontWeight": "400",
+                    }
+                  }
+                >
+                  09 de diciembre 2022
+                </Text>
+              </View>
+            </View>
+            <View>
+              <Text
+                style={
+                  {
+                    "fontSize": 14,
+                    "fontWeight": "800",
+                  }
+                }
+              >
+                <Text
+                  style={
+                    {
+                      "color": "#FF0000",
+                    }
+                  }
+                >
+                  - 
+                </Text>
+                30
+              </Text>
+            </View>
+          </View>
+        </View>
+        <View
+          style={
+            {
+              "height": 0,
+            }
+          }
+        />
+      </View>
+    </RCTScrollView>
+  </View>
+  <View
+    style={
+      {
+        "flexDirection": "row",
+        "marginTop": 20,
+      }
+    }
+  >
+    <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "alignItems": "center",
+          "backgroundColor": "#334FFA",
+          "borderRadius": 10,
+          "flex": 1,
+          "height": 50,
+          "justifyContent": "center",
+          "marginRight": 10,
+          "opacity": 1,
+        }
+      }
+      testID="ganados-btn"
+    >
+      <Text
+        style={
+          {
+            "color": "white",
+            "fontSize": 14,
+            "fontWeight": "800",
+          }
+        }
+      >
+        Ganados
+      </Text>
+    </View>
+    <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "alignItems": "center",
+          "backgroundColor": "#334FFA",
+          "borderRadius": 10,
+          "flex": 1,
+          "height": 50,
+          "justifyContent": "center",
+          "opacity": 1,
+        }
+      }
+      testID="canjeados-btn"
+    >
+      <Text
+        style={
+          {
+            "color": "white",
+            "fontSize": 14,
+            "fontWeight": "800",
+          }
+        }
+      >
+        Canjeados
+      </Text>
+    </View>
+  </View>
+</RCTSafeAreaView>
+`;

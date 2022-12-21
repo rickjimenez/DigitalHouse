@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test TotalPoints Comp renders correctly 1`] = `
+<View>
+  <Text
+    style={
+      {
+        "color": "#9B9898",
+        "fontSize": 14,
+        "fontWeight": "800",
+        "marginBottom": 10,
+      }
+    }
+  >
+    TUS PUNTOS
+  </Text>
+  <View
+    style={
+      {
+        "alignSelf": "center",
+        "backgroundColor": "#334FFA",
+        "borderRadius": 20,
+        "elevation": 5,
+        "height": 143,
+        "justifyContent": "center",
+        "marginBottom": 20,
+        "padding": 20,
+        "shadowColor": "#000",
+        "shadowOffset": {
+          "height": 2,
+          "width": 0,
+        },
+        "shadowOpacity": 0.25,
+        "shadowRadius": 3.84,
+        "width": 286,
+      }
+    }
+  >
+    <Text
+      style={
+        [
+          {
+            "color": "white",
+            "fontWeight": "bold",
+          },
+          {
+            "fontSize": 16,
+          },
+        ]
+      }
+    >
+      Diciembre
+    </Text>
+    <View
+      style={
+        {
+          "alignItems": "center",
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Text
+        style={
+          [
+            {
+              "color": "white",
+              "fontWeight": "bold",
+            },
+            {
+              "fontSize": 32,
+            },
+          ]
+        }
+      >
+        70
+         pts
+      </Text>
+    </View>
+  </View>
+</View>
+`;

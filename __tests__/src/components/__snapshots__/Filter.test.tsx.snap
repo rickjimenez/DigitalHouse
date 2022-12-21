@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`test Button Comp renders correctly 1`] = `
+exports[`test Filter Comp renders correctly 1`] = `
 <View
   style={
     {

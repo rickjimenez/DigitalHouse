@@ -1,7 +1,6 @@
 import React, {FC, useState} from 'react';
 import {SafeAreaView, StyleSheet} from 'react-native';
 import {useGetProducts} from '../queries';
-import {HomeProps} from '../types/navigation';
 import TotalPoints from '../components/TotalPoints';
 import Welcome from '../components/Welcome';
 import ProductList from '../components/ProductList';
@@ -13,7 +12,7 @@ import {FilterOptions} from '../types/products';
  *
  * @returns {React.ReactElement} Home.
  */
-const Home: FC<HomeProps> = (): JSX.Element => {
+const Home: FC = (): JSX.Element => {
   const {data, isLoading, isRefetching, refetch} = useGetProducts();
   const [showProductsCategory, setShowProductsCategory] =
     useState<FilterOptions>();
