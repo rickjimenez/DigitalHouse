@@ -1,0 +1,229 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test Button Comp renders correctly 1`] = `
+[
+  <Text
+    style={
+      {
+        "color": "#9B9898",
+        "fontSize": 14,
+        "fontWeight": "800",
+        "marginBottom": 10,
+      }
+    }
+  >
+    TUS PUNTOS
+  </Text>,
+  <View
+    style={
+      {
+        "backgroundColor": "white",
+        "borderRadius": 20,
+        "flex": 1,
+      }
+    }
+  >
+    <RCTScrollView
+      data={[]}
+      getItem={[Function]}
+      getItemCount={[Function]}
+      keyExtractor={[Function]}
+      onContentSizeChange={[Function]}
+      onLayout={[Function]}
+      onMomentumScrollBegin={[Function]}
+      onMomentumScrollEnd={[Function]}
+      onRefresh={[Function]}
+      onScroll={[Function]}
+      onScrollBeginDrag={[Function]}
+      onScrollEndDrag={[Function]}
+      refreshControl={
+        <RefreshControlMock
+          onRefresh={[Function]}
+          refreshing={false}
+        />
+      }
+      refreshing={false}
+      removeClippedSubviews={false}
+      renderItem={[Function]}
+      scrollEventThrottle={50}
+      showsVerticalScrollIndicator={false}
+      stickyHeaderIndices={[]}
+      testID="list"
+      viewabilityConfigCallbackPairs={[]}
+    >
+      <RCTRefreshControl />
+      <View />
+    </RCTScrollView>
+  </View>,
+]
+`;
+
+exports[`test ProductList Comp renders correctly 1`] = `
+[
+  <Text
+    style={
+      {
+        "color": "#9B9898",
+        "fontSize": 14,
+        "fontWeight": "800",
+        "marginBottom": 10,
+      }
+    }
+  >
+    TUS PUNTOS
+  </Text>,
+  <View
+    style={
+      {
+        "backgroundColor": "white",
+        "borderRadius": 20,
+        "flex": 1,
+      }
+    }
+  >
+    <RCTScrollView
+      data={
+        [
+          {
+            "createdAt": "2022-12-09T06:34:25.607Z",
+            "id": "1",
+            "image": "image",
+            "is_redemption": false,
+            "points": 100,
+            "product": "product",
+          },
+        ]
+      }
+      getItem={[Function]}
+      getItemCount={[Function]}
+      keyExtractor={[Function]}
+      onContentSizeChange={[Function]}
+      onLayout={[Function]}
+      onMomentumScrollBegin={[Function]}
+      onMomentumScrollEnd={[Function]}
+      onRefresh={[MockFunction]}
+      onScroll={[Function]}
+      onScrollBeginDrag={[Function]}
+      onScrollEndDrag={[Function]}
+      refreshControl={
+        <RefreshControlMock
+          onRefresh={[MockFunction]}
+          refreshing={false}
+        />
+      }
+      refreshing={false}
+      removeClippedSubviews={false}
+      renderItem={[Function]}
+      scrollEventThrottle={50}
+      showsVerticalScrollIndicator={false}
+      stickyHeaderIndices={[]}
+      testID="list"
+      viewabilityConfigCallbackPairs={[]}
+    >
+      <RCTRefreshControl />
+      <View>
+        <View
+          onLayout={[Function]}
+          style={null}
+        >
+          <View
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+                "marginBottom": 20,
+                "marginHorizontal": 20,
+                "marginTop": 20,
+                "opacity": 1,
+              }
+            }
+            testID="item-btn"
+          >
+            <View
+              style={
+                {
+                  "alignItems": "center",
+                  "flexDirection": "row",
+                }
+              }
+            >
+              <Image
+                source={
+                  {
+                    "cache": "default",
+                    "uri": "image",
+                  }
+                }
+                style={
+                  [
+                    {
+                      "borderRadius": 10,
+                      "height": 45,
+                      "marginRight": 10,
+                      "width": 45,
+                    },
+                  ]
+                }
+              />
+              <View>
+                <Text
+                  style={
+                    {
+                      "fontSize": 14,
+                      "fontWeight": "800",
+                    }
+                  }
+                >
+                  product
+                </Text>
+                <Text
+                  style={
+                    {
+                      "fontSize": 12,
+                      "fontWeight": "400",
+                    }
+                  }
+                >
+                  09 de diciembre 2022
+                </Text>
+              </View>
+            </View>
+            <View>
+              <Text
+                style={
+                  {
+                    "fontSize": 14,
+                    "fontWeight": "800",
+                  }
+                }
+              >
+                <Text
+                  style={
+                    {
+                      "color": "#00B833",
+                    }
+                  }
+                >
+                  + 
+                </Text>
+                100
+              </Text>
+            </View>
+          </View>
+        </View>
+      </View>
+    </RCTScrollView>
+  </View>,
+]
+`;

@@ -41,7 +41,8 @@ const ProductList: FC<Props> = ({
     return (
       <TouchableOpacity
         style={[styles.listItem, lastItem, fistItem]}
-        onPress={() => nav.navigate('ProductDetails', {productId: item.id})}>
+        onPress={() => nav.navigate('ProductDetails', {productId: item.id})}
+        testID="item-btn">
         <View style={styles.productInfoContainer}>
           <Image
             style={[styles.thumb]}
@@ -79,6 +80,7 @@ const ProductList: FC<Props> = ({
           onRefresh={refetch}
           refreshing={isRefetching}
           showsVerticalScrollIndicator={false}
+          testID="list"
         />
       </View>
     </>

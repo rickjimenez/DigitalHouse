@@ -4,7 +4,7 @@ import Button from './Button';
 import {FilterOptions} from '../types/products';
 
 interface Props {
-  onFilterChange: (val: FilterOptions) => void;
+  onFilterChange?: (val: FilterOptions) => void;
 }
 
 /**
@@ -28,11 +28,13 @@ const Filter: FC<Props> = ({onFilterChange = () => {}}): JSX.Element => {
             label="Ganados"
             style={styles.leftBtn}
             onPress={() => setFilter(FilterOptions.Ganados)}
+            testID="ganados-btn"
           />
           <Button
             label="Canjeados"
             style={styles.rightBtn}
             onPress={() => setFilter(FilterOptions.Canjeados)}
+            testID="canjeados-btn"
           />
         </>
       ) : (
@@ -40,6 +42,7 @@ const Filter: FC<Props> = ({onFilterChange = () => {}}): JSX.Element => {
           label="Todos"
           style={styles.rightBtn}
           onPress={() => setFilter(FilterOptions.Todos)}
+          testID="todos-btn"
         />
       )}
     </View>

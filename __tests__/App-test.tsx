@@ -1,7 +1,3 @@
-/**
- * @format
- */
-
 import 'react-native';
 import {render, screen} from '@testing-library/react-native';
 import React from 'react';

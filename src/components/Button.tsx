@@ -6,6 +6,7 @@ interface Props {
   label: string;
   style?: ViewStyle;
   onPress?: () => void;
+  testID?: string;
 }
 
 /**
@@ -13,10 +14,18 @@ interface Props {
  *
  * @returns {React.ReactElement} Button.
  */
-const Button: FC<Props> = ({label, style, onPress = () => {}}): JSX.Element => {
+const Button: FC<Props> = ({
+  label,
+  style,
+  onPress = () => {},
+  testID,
+}): JSX.Element => {
   const globalStyles = useGlobalStyles();
   return (
-    <TouchableOpacity style={[globalStyles.btn, style]} onPress={onPress}>
+    <TouchableOpacity
+      style={[globalStyles.btn, style]}
+      onPress={onPress}
+      testID={testID}>
       <Text style={globalStyles.btnTxt}>{label}</Text>
     </TouchableOpacity>
   );
